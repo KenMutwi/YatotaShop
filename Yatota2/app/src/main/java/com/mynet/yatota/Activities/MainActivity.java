@@ -44,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        analysis.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent= new Intent(MainActivity.this, Analysis.class);
-//                startActivity(intent);
-//            }
-//        });
+        analysis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(MainActivity.this, InfoAnalysis.class);
+                startActivity(intent);
+            }
+        });
     }
 }

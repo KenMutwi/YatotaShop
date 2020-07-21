@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mynet.yatota">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.ManagerPortal"></activity>
+        <activity android:name=".Activities.ShopData"></activity>
+        <activity android:name=".Activities.InfoAnalysis" />
+        <activity android:name=".Activities.ManagerPortal" />
         <activity android:name=".Activities.ProductDetails" />
         <activity android:name=".Activities.ProductHome" />
         <activity android:name=".Activities.MainActivity">

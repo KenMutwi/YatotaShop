@@ -60,10 +60,15 @@ public class ManagerPortal extends AppCompatActivity {
 
         time.setInputType(InputType.TYPE_NULL);
 
-        time.setOnClickListener(new View.OnClickListener() {
+        presstime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getcurrenttime(time);
+
+                Calendar calendar= Calendar.getInstance();
+                SimpleDateFormat format=new SimpleDateFormat("HH:mm");
+                String exact_time=format.format(calendar.getTime());
+                time.setText(exact_time);
+                getcurrenttime();
             }
         });
 
@@ -79,19 +84,9 @@ public class ManagerPortal extends AppCompatActivity {
 
     }
 
-    private void getcurrenttime(final EditText time) {
+    private void getcurrenttime() {
         final Calendar calendar = Calendar.getInstance();
-        TimePickerDialog.OnTimeSetListener timeSetListener=new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
-                calendar.set(Calendar.MINUTE,minute);
-                SimpleDateFormat simpleDateFormat= new SimpleDateFormat("HH:mm");
-                time.setText(simpleDateFormat.format(calendar.getTime()));
 
-            }
-        };
-        new TimePickerDialog(ManagerPortal.this,timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false);
 
     }
 
