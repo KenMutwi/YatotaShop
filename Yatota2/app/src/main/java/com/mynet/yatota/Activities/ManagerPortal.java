@@ -3,12 +3,14 @@ package com.mynet.yatota.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -18,7 +20,6 @@ import com.mynet.yatota.Interfaces.ApiInterface2;
 import com.mynet.yatota.Model.ManagerimodelClass;
 import com.mynet.yatota.R;
 import com.mynet.yatota.Utilis.ApiClient;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -32,6 +33,7 @@ public class ManagerPortal extends AppCompatActivity {
     CheckBox shave, beard, scrub, dye, style, rocks, pedi, mani, massage;
     RadioGroup gender, age, attendant, athi, mesus;
     TextView  output;
+    ImageView gotofragment;
 
 
     @Override
@@ -42,7 +44,7 @@ public class ManagerPortal extends AppCompatActivity {
         time = findViewById(R.id.timeSevice);
         amount= findViewById(R.id.chargeRate);
         mpesacode = findViewById(R.id.mpesacode);
-        attendant= findViewById(R.id.attendant);
+        attendant= findViewById(R.id.athiriver);
         shave = findViewById(R.id.shave);
         beard = findViewById(R.id.beard);
         scrub = findViewById(R.id.scrub);
@@ -57,6 +59,15 @@ public class ManagerPortal extends AppCompatActivity {
         output = findViewById(R.id.output);
         submit = findViewById(R.id.submit);
         presstime=findViewById(R.id.clienttime);
+        gotofragment=findViewById(R.id.prdEntry);
+        gotofragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(ManagerPortal.this, ProOrderActivity.class);
+               startActivity(intent);
+
+            }
+        });
 
         time.setInputType(InputType.TYPE_NULL);
 
@@ -84,6 +95,7 @@ public class ManagerPortal extends AppCompatActivity {
 
     }
 
+
     private void getcurrenttime() {
         final Calendar calendar = Calendar.getInstance();
 
@@ -93,17 +105,17 @@ public class ManagerPortal extends AppCompatActivity {
     private  String resultattendant(){
         String resultattendant = "";
         int attendant_id = attendant.getCheckedRadioButtonId();
-        if (attendant_id==R.id.obama){
-            String obama1 = new String("Obama");
+        if (attendant_id==R.id.barber1){
+            String obama1 = new String("Charles");
             resultattendant=obama1;
         }
 
-        if (attendant_id==R.id.mike){
-            String mike1 = new String("Mike");
+        if (attendant_id==R.id.barber2){
+            String mike1 = new String("Alfonse");
             resultattendant= mike1;
         }
-        if (attendant_id==R.id.levee){
-            String levee = new String("Levee");
+        if (attendant_id==R.id.barber3){
+            String levee = new String("TBA1");
             resultattendant= levee;
 
         }

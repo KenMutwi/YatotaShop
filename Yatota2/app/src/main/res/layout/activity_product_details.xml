@@ -8,13 +8,27 @@
 
     <ImageView
         android:id="@+id/cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="23dp"
+        android:layout_height="22dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
+        android:src="@drawable/ic_cart_black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_cart_black" />
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/cartcount"
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/badge_shape"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/back2"
@@ -40,9 +54,9 @@
 
     <ImageView
         android:id="@+id/big_image"
-        android:layout_width="340dp"
-        android:layout_height="340dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back2"
@@ -53,9 +67,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/open_sans_bold"
-        android:text="TextView"
+        android:text="prodName"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/big_image" />
@@ -64,7 +78,7 @@
         android:id="@+id/prodDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="272dp"
         android:fontFamily="@font/open_sans_light"
         android:text="prodDesc"
@@ -103,7 +117,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prodPrice"
+        app:layout_constraintTop_toBottomOf="@+id/qty"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/cartbutton" />
 
@@ -111,9 +125,9 @@
         android:id="@+id/prodPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/open_sans_bold"
-        android:text="TextView"
+        android:text="ProPrice"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/prodDesc"
         app:layout_constraintTop_toBottomOf="@+id/prodDesc" />
@@ -133,11 +147,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/open_sans_light"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/qty"
         app:layout_constraintStart_toEndOf="@+id/qty"
-        app:layout_constraintTop_toTopOf="@+id/qty" />
+        app:layout_constraintTop_toBottomOf="@+id/prodPrice" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,7 +22,78 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="View Manager data"
+        android:text="View All Shops data"
         />
+    <Button
+        android:id="@+id/Total_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View Total Shop data"
+        />
+    <Button
+        android:id="@+id/Lukenya_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View Lukenya Shop data"
+        />
+    <Button
+        android:id="@+id/amazon_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View Amazon Shop data"
+        />
+    <Button
+        android:id="@+id/imelda_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View Imelda Shop data"
+        />
+    <Button
+        android:id="@+id/charles_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View Charles data"
+        />
+    <Button
+        android:id="@+id/alfonse_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View alfonse data"
+        />
+    <Button
+        android:id="@+id/david_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View david data"
+        />
+    <Button
+        android:id="@+id/Lievee_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View Lievee data"
+        />
+    <Button
+        android:id="@+id/obama_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View Obama data"
+        />
+    <Button
+        android:id="@+id/mike_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View Mike data"
+        />
+
 
 </LinearLayout>

@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProOrderActivity">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp"
-        tools:context=".Activities.ManagerPortal">
+        android:padding="10dp">
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -22,30 +26,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FFCDDC39"
-                    android:gravity="center_horizontal"
-                    android:padding="5dp"
-                    android:text="Manager Data Form"
-                    android:textAlignment="center"
-                    android:textColor="#0C0C0C"
-                    android:textSize="20sp" />
-                <ImageView
-                    android:id="@+id/prdEntry"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="26dp"
-                    android:background="@color/banner_background"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_add_location" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFCDDC39"
+                        android:gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:text="Products Data Form"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp" />
+
                 </RelativeLayout>
 
 
@@ -54,16 +50,37 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/clientdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ENTER DATE:"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/dateSevice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/clientdate"
+                        android:gravity="center_horizontal"
+                        android:hint="Press Button for date"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
                         android:id="@+id/clienttime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/clientdate"
                         android:text="ENTER TIME:"
                         android:textStyle="bold" />
 
                     <EditText
-                        android:id="@+id/timeSevice"
+                        android:id="@+id/timeSevice1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/clientdate"
                         android:layout_toRightOf="@+id/clienttime"
                         android:gravity="center_horizontal"
                         android:hint="Press Button for time"
@@ -77,148 +94,67 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Ettendants Name"
+                    android:text="Shop Product Issued"
                     android:textColor="#DC6161"
                     android:textSize="15sp" />
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <RadioGroup
-                        android:id="@+id/athiriver"
+                        android:id="@+id/allshops"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/barber1"
+                            android:id="@+id/shop1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Charles" />
+                            android:text="1" />
 
                         <RadioButton
-                            android:id="@+id/barber2"
+                            android:id="@+id/shop2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Alfonse" />
+                            android:text="2" />
 
                         <RadioButton
-                            android:id="@+id/barber3"
+                            android:id="@+id/shop3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="TBA" />
+                            android:text="3" />
+
+
+                        <RadioButton
+                            android:id="@+id/shop4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="4" />
+
+                        <RadioButton
+                            android:id="@+id/shop5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="5" />
+
                     </RadioGroup>
-                </LinearLayout>
+                </RelativeLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Masseuse"
-                    android:textColor="#DC6161"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <RadioGroup
-                        android:id="@+id/female_att"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/faith"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Faith" />
-
-                        <RadioButton
-                            android:id="@+id/coloho"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Constra" />
-                    </RadioGroup>
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Customer Details"
-                    android:textColor="#DC6161"
-                    android:textSize="15sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <RadioGroup
-                        android:id="@+id/gender"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/male"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Male" />
-
-                        <RadioButton
-                            android:id="@+id/female"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Female" />
-                    </RadioGroup>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <RadioGroup
-                        android:id="@+id/age"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/adult"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Adult" />
-
-                        <RadioButton
-                            android:id="@+id/kid"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Kid" />
-                    </RadioGroup>
-                </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Servises Offered"
+                    android:text="Pick Products Issued"
                     android:textColor="#DC6161"
                     android:textSize="15sp" />
 
@@ -228,81 +164,209 @@
                     android:orientation="horizontal">
 
                     <CheckBox
-                        android:id="@+id/shave"
+                        android:id="@+id/neckr"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Shave" />
+                        android:text="Neckroll" />
 
                     <CheckBox
-                        android:id="@+id/beard"
+                        android:id="@+id/vaseline"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Beard" />
+                        android:text="Vaseline" />
 
                     <CheckBox
-                        android:id="@+id/scrub"
+                        android:id="@+id/Pump"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="PumpPatrol" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/spirit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Spirit" />
+
+                    <CheckBox
+                        android:id="@+id/shampoo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Shampoo" />
+
+                    <CheckBox
+                        android:id="@+id/freshman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Freshman" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/ShaveForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ShaveForm" />
+
+                    <CheckBox
+                        android:id="@+id/msoil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="MassageOil" />
+
+                    <CheckBox
+                        android:id="@+id/khearts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="KingHearts" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/aden"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="AdenScrub" />
+
+                    <CheckBox
+                        android:id="@+id/tonner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tonner" />
+
+                    <CheckBox
+                        android:id="@+id/dettol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dettol" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/castoroil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CastorOil" />
+
+                    <CheckBox
+                        android:id="@+id/olive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="OliveSpray" />
+
+                    <CheckBox
+                        android:id="@+id/bvase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="BVaseline" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/bshampoo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="BlackSDye" />
+
+                    <CheckBox
+                        android:id="@+id/creme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="CremeDye" />
+
+                    <CheckBox
+                        android:id="@+id/masque"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Masque" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/bshampoo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="BlackSDye" />
+
+                    <CheckBox
+                        android:id="@+id/creme1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="CremeDye" />
+
+                    <CheckBox
+                        android:id="@+id/scrub1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Scrub" />
-
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <CheckBox
-                        android:id="@+id/dye"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Dye" />
 
-                    <CheckBox
-                        android:id="@+id/style"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Style" />
-
-                    <CheckBox
-                        android:id="@+id/rocks"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Rocks" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <CheckBox
-                        android:id="@+id/pedi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="pedicure" />
-
-                    <CheckBox
-                        android:id="@+id/mani"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Manicure" />
-
-                    <CheckBox
-                        android:id="@+id/massage"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Massage" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -316,7 +380,7 @@
                         android:layout_weight="1">
 
                         <EditText
-                            android:id="@+id/chargeRate"
+                            android:id="@+id/chargeRate1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:hint="Amount Paid Ksh:"
@@ -338,7 +402,7 @@
                         android:layout_weight="1">
 
                         <EditText
-                            android:id="@+id/mpesacode"
+                            android:id="@+id/mpesacodef"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:hint="Mpesa Code or Cash"
@@ -348,7 +412,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/submit"
+                    android:id="@+id/submit1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -357,7 +421,7 @@
                     android:textColor="#fff" />
 
                 <TextView
-                    android:id="@+id/output"
+                    android:id="@+id/output1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp" />

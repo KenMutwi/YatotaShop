@@ -2,6 +2,7 @@ package com.mynet.yatota.Model;
 
 public class RecentlyViewed {
 
+    int id;
     String name;
     String description;
     String price;
@@ -10,7 +11,8 @@ public class RecentlyViewed {
     int imageUrl;
     int bigimageurl;
 
-    public RecentlyViewed(String name, String description, String price, String quantity, String unit, int imageUrl, int bigimageurl) {
+    public RecentlyViewed(int id,String name, String description, String price, String quantity, String unit, int imageUrl, int bigimageurl) {
+        this.id=id;
         this.name = name;
         this.description = description;
         this.price = price;
@@ -18,6 +20,11 @@ public class RecentlyViewed {
         this.unit = unit;
         this.imageUrl = imageUrl;
         this.bigimageurl = bigimageurl;
+    }
+    public  int getId(){return id;}
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

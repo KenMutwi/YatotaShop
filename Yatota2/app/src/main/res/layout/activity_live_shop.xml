@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.LiveShopActivity">
+
+<RelativeLayout
+    android:id="@+id/relativeimelda"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Live Shop Sensors View"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageChair1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/ic_cloud" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageChair1"
+        android:layout_marginTop="10dp"
+        android:text="iChair1"
+        android:textSize="20sp"
+       />
+    <ImageButton
+        android:id="@+id/imageChair2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView5"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/imageChair1"
+        app:srcCompat="@drawable/ic_cloud" />
+    <TextView
+        android:id="@+id/ichair2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageChair2"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
+        android:text="iChair2"
+        android:textSize="20sp"
+        />
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageChair3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_cloud" />
+        <TextView
+            android:id="@+id/textchair3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageChair3"
+            android:layout_marginTop="10dp"
+            android:text="iChair3"
+            android:textSize="20sp"
+            />
+        <ImageButton
+            android:id="@+id/imageChair4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imageChair3"
+            app:srcCompat="@drawable/ic_cloud" />
+        <TextView
+            android:id="@+id/ichair4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageChair4"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:text="iChair4"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

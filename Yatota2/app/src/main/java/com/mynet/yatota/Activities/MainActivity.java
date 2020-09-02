@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
         products=(TextView) findViewById(R.id.itemTitle3);
         analysis=(TextView) findViewById(R.id.itemTitle4);
 
-//        liveshops.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent= new Intent(MainActivity.this, Livestatus.class);
-//                startActivity(intent);
-//            }
-//        });
+      liveshops.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+              Intent intent= new Intent(MainActivity.this, LiveShopActivity.class);
+                startActivity(intent);
+            }
+        });
         manager.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View v) {
